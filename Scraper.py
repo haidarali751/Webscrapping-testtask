@@ -8,7 +8,7 @@ from requests_html import HTMLSession
 os.system('cls' if os.name == 'nt' else 'clear')
 
 Query = input('Enter Your Query : ')
-Limit = int(input('Enter No. Of Urls To Scrape : '))
+
 
 file = open('Results.txt', 'w')
 
@@ -29,7 +29,7 @@ headers = {
 
 params = {
     'q': Query,
-    'num': Limit,
+   
 }
 
 response = s.get('https://www.google.com/search', params=params)
