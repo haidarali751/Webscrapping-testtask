@@ -41,6 +41,6 @@ elif 'Our systems have detected unusual traffic from your computer' in response.
 else:
     links = list(response.html.absolute_links)
     for url in links[:]:
-        if not 'google' in url:
+        if  'google' in url:
             print(url)
             file.write(url+'\n')
